@@ -2,21 +2,12 @@
 
 {% block body %}
 <h1>Register</h1>
-    <form action="/Register" method="post">
+    <form action="/register" method="post">
         <input autocomplete="off" autofocus name="name" 
           placeholder="Name" type="text">
-        <select name="sport">
-          <option disabled selected value="">Sport</option>
           {% for sport in sports %}
-<!--           <option value="Volleyboll">Volleyboll</option>
-          <option value="Footboll">Footboll</option>
-          <option value="Ultimate Frisbee">Ultimate Frisbee</option>
-          <option value="Capture the Flag">Capture the Flag</option>
-          <option value="Dance Battle">Dance Battle</option> -->
-
-          <option value="{{ sport }}">{{ sport }}</option>
+          <input name="sport" type="radio" value="{{ sport }}">{{ sport }}
           {% endfor %}
-          </select>
       <input type="submit" value="Register">
 
       </form>
