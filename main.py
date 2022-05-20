@@ -22,7 +22,7 @@ def register():
     if not name:
         return render_template("error.html", message="Missing name!")
 
-    sport = request.form.getlist("sport")
+    sport = request.form.get("sport")
     if not sport:
         return render_template("error.html", message="Missing sport!")
     if sport not in SPORTS:
