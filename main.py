@@ -1,6 +1,8 @@
+from cs50 import SQL
 from flask import Flask, render_template, request, redirect
 
 app = Flask(__name__)
+db = SQL("sqlite:///office-olimpics.db")
 
 SPORTS = [
     "Volleyboll", "Footboll", "Ultimate Frisbee", "Capture the Flag",
